@@ -1,0 +1,20 @@
+# PostgreSQL. Versions 8.2 and up are supported.
+default: &default
+  adapter: postgresql
+  encoding: unicode
+  pool: 5
+  timeout: 5000
+  username: shivanirails
+  password: 123456
+
+development:
+  <<: *default
+  database: testtask_development
+
+test:
+  <<: *default
+  database: testtask_test
+
+production:
+  <<: *default
+  database: testtask_production
